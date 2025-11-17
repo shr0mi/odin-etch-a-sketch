@@ -53,6 +53,10 @@ h2 {
     font-size: 1.2em;
 }
 
+.controls #gridSize {
+    font-size: 0.8em;
+}
+
 .controls div button {
     background-color: #2D336B;
     border: none;

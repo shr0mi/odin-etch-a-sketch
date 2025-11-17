@@ -7,7 +7,11 @@ const gridNumInput = document.querySelector("#gridNum");
 gridNumInput.addEventListener("mouseup", (event) => {
     //console.log(gridNumInput.value);
     createGrid(gridNumInput.value);
+    gridSize.textContent = "Size: " + gridNumInput.value.toString() + " x " + gridNumInput.value.toString(); 
 });
+
+// Display Grid Size
+const gridSize = document.querySelector("#gridSize");
 
 // Set Color
 let color = "#000000";
