@@ -23,6 +23,19 @@ clearBtn.onclick = () => {
     createGrid(gridNumInput.value);
 };
 
+// Eraser Mode
+let eraserMode = false;
+const eraseBtn = document.querySelector("#eraser");
+eraseBtn.onclick = ()=>{
+    if(eraserMode){
+        eraserMode = false;
+        eraseBtn.classList.remove("selected");
+    }else{
+        eraserMode = true;
+        eraseBtn.classList.add("selected");
+    }
+}
+
 // Random Color
 let randomColorMode = false;
 const randomBtn = document.querySelector("#randomColor");
@@ -63,7 +76,9 @@ function createGrid(num){
 
             // Add on mouse over event listener
             grid.addEventListener("mouseenter", (event)=>{
-                if(!randomColorMode)
+                if(eraserMode){
+                    grid.style.backgroundColor = "#F8FAFC";
+                }else if(!randomColorMode)
                     grid.style.backgroundColor = color;
                 else{
                     //console.log(generateRndColor());
