@@ -17,6 +17,12 @@ colorInput.addEventListener("input", (event)=>{
     console.log(color);
 });
 
+// Clear Grid
+const clearBtn = document.querySelector("#clearGrid");
+clearBtn.onclick = () => {
+    createGrid(gridNumInput.value);
+};
+
 
 function createGrid(num){
     // First Remove All Children
