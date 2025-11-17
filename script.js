@@ -5,7 +5,7 @@ const gridContainer = document.querySelector("#container");
 // Dynamic Change Grid tiles
 const gridNumInput = document.querySelector("#gridNum");
 gridNumInput.addEventListener("mouseup", (event) => {
-    console.log(gridNumInput.value);
+    //console.log(gridNumInput.value);
     createGrid(gridNumInput.value);
 });
 
@@ -22,6 +22,28 @@ const clearBtn = document.querySelector("#clearGrid");
 clearBtn.onclick = () => {
     createGrid(gridNumInput.value);
 };
+
+// Random Color
+let randomColorMode = false;
+const randomBtn = document.querySelector("#randomColor");
+randomBtn.onclick = ()=>{
+    if(randomColorMode){
+        randomColorMode = false;
+        color = colorInput.value;
+        randomBtn.classList.remove("selected");
+    }else{
+        randomColorMode = true;
+        randomBtn.classList.add("selected");
+    }
+};
+
+function getRandomInt(max){
+    return Math.floor(Math.random() * max+1);
+}
+
+function generateRndColor(){
+    return "rgb(" + getRandomInt(256).toString() + ", " + getRandomInt(256).toString() + ", " + getRandomInt(256).toString() + ")"; 
+}
 
 
 function createGrid(num){
@@ -41,7 +63,12 @@ function createGrid(num){
 
             // Add on mouse over event listener
             grid.addEventListener("mouseenter", (event)=>{
-                grid.style.backgroundColor = color;
+                if(!randomColorMode)
+                    grid.style.backgroundColor = color;
+                else{
+                    //console.log(generateRndColor());
+                    grid.style.backgroundColor = generateRndColor();
+                }
             });
         }
         gridContainer.appendChild(gridRow);
