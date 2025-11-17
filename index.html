@@ -5,16 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="container">
-    </div>    
-    <div class="controls">
-        <input type="range" id="gridNum" min="1" max="64" value="16">
-        <input type="color" id="colorPicker" value="#000000">
-        <button id="clearGrid">Clear</button>
-        <button id="randomColor">Random Mode</button>
+    <h2>Etch A Sketch</h2>
+    <div class="application">
+        <div id="container">
+        </div>    
+        <div class="controls">
+            <div>
+            <p>Controls</p>
+            <input type="range" id="gridNum" min="1" max="64" value="16">
+            <input type="color" id="colorPicker" value="#000000">
+            <button id="clearGrid">Clear</button>
+            <button id="randomColor">Random Mode</button>
+            </div>
+        </div>
     </div>
+    <p>Created by <a href="https://github.com/shr0mi">Shr0mi</a></p>
     
     <script defer src="script.js">
     </script>

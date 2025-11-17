@@ -1,6 +1,18 @@
+body {
+    background-color: #F8FAFC;
+    font-family: "Roboto Mono", monospace;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 #container {
+    border: 1px solid black;
     max-width: 600px;
     min-width: 300px;
+    width: 100%;
 }
 
 .gridRow {
@@ -9,4 +21,61 @@
 
 .gridTile {
     border: 1px solid black;
+}
+
+.application {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    
+}
+
+.controls div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    background-color: #9AA6B2;
+    padding: 20px;
+}
+
+.controls p {
+    margin: 0px;
+    font-size: 1.2em;
+}
+
+.controls div button {
+    background-color: #2D336B;
+    border: none;
+    color: #F8FAFC;
+    padding: 10px;
+}
+
+.controls div button:hover {
+    background-color: #F8FAFC;
+    color: #2D336B;
+}
+
+.controls div .selected {
+    background-color: #F8FAFC;
+    color: #2D336B;
+}
+
+body p {
+    margin-top: 30px;
+    text-align: center;
+}
+
+body p a{
+    text-decoration: underline;
+    color: black;
 }
