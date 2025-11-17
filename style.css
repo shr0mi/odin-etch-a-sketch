@@ -1,0 +1,12 @@
+#container {
+    max-width: 600px;
+    min-width: 300px;
+}
+
+.gridRow {
+    display: flex;
+}
+
+.gridTile {
+    border: 1px solid black;
+}
