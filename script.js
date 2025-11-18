@@ -4,7 +4,7 @@ const gridContainer = document.querySelector("#container");
 
 // Dynamic Change Grid tiles
 const gridNumInput = document.querySelector("#gridNum");
-gridNumInput.addEventListener("mouseup", (event) => {
+gridNumInput.addEventListener("input", (event) => {
     //console.log(gridNumInput.value);
     createGrid(gridNumInput.value);
     gridSize.textContent = "Size: " + gridNumInput.value.toString() + " x " + gridNumInput.value.toString(); 
